@@ -3,18 +3,29 @@ package com.example.finaltest;
 import java.util.Date;
 import java.util.UUID;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Estudiante {
 
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "nombre")
     private String nombre;
-    private String edad;
-    private String email;
-    private String mDate;
 
-    public Estudiante(String nombre, String edad, String email, String mDate) {
+    @ColumnInfo(name = "edad")
+    private String edad;
+
+    @ColumnInfo(name = "email")
+    private String email;
+
+    public Estudiante(String nombre, String edad, String email) {
         this.nombre = nombre;
         this.edad = edad;
         this.email = email;
-        this.mDate = mDate;
     }
 
     public String getNombre() {
@@ -39,13 +50,5 @@ public class Estudiante {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getmDate() {
-        return mDate;
-    }
-
-    public void setmDate(String mDate) {
-        this.mDate = mDate;
     }
 }

@@ -1,25 +1,22 @@
 package com.example.finaltest;
 
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class HolderEstudiante extends RecyclerView.ViewHolder {
 
     private TextView nombre_alumno;
-    private  TextView fecha;
-
+    private  TextView edad;
+    private  TextView email;
 
     public HolderEstudiante(@NonNull View itemView) {
         super(itemView);
-
-        //Instanciamos los elemntos
         nombre_alumno = itemView.findViewById(R.id.nombre_alumnoCard);
-        fecha = itemView.findViewById(R.id.fechaCard);
+        edad = itemView.findViewById(R.id.edadCard);
+        email = itemView.findViewById(R.id.emailCard);
     }
 
     public TextView getNombre_alumno() {
@@ -30,14 +27,20 @@ public class HolderEstudiante extends RecyclerView.ViewHolder {
         this.nombre_alumno = nombre_alumno;
     }
 
-    public TextView getFecha() {
-        return fecha;
+    public TextView getEdad() {
+        return edad;
     }
 
-    public void setFecha(TextView fecha) {
-        this.fecha = fecha;
+    public void setEdad(TextView edad) {
+        this.edad = edad;
     }
 
+    public TextView getEmail() {
+        return email;
+    }
 
+    public void setEmail(TextView email) {
+        this.email = email;
+    }
 }
 
