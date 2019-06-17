@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    tools:context=".FormularioAlumnoActivity">
+
+<!-- LinearLayout BOTONES -->
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    android:orientation="vertical">
+
+
+    <!-- BOTON REGRESAR -->
+    <Button
+        android:id="@+id/btnHome2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Volver" />
+
+    <!-- BOTON IR VISTA 3 -->
+    <Button
+        android:id="@+id/btnIrVista3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ir Vista 3" />
+
+</LinearLayout>  <!-- LinearLayout BOTONES -->
+
+
+<!-- LinearLayout VERTICAL -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="PERFIL ESTUDIANTE"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <!-- LinearLayout HORIZONTAL  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:orientation="horizontal">
+
+        <!-- LinearLayout TextView -->
+        <LinearLayout
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewNombre"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Nombre:" />
+
+            <TextView
+                android:id="@+id/textViewEdad"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Edad:" />
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="216dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Email:" />
+        </LinearLayout>
+        <!-- LinearLayout TextView -->
+
+        <!-- LinearLayout EditText -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Edad"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+        <!-- LinearLayout EditText -->
+
+    </LinearLayout> <!-- LinearLayout HORIZONTAL  -->
+
+</LinearLayout> <!-- LinearLayout VERTICAL -->
+
+<!-- FOTOGRAFÍA -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="136dp"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:onClick="takePicture"
+        android:text="Tomar una foto"></Button>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
+</LinearLayout>
+
+<Button
+    android:id="@+id/btnGuardar"
+    style="@android:style/Widget.Button"
+    android:layout_width="206dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/colorPrimary"
+    android:hint="Guardar/Actualizar" />
+
+<Button
+    android:id="@+id/crime_date"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>
+

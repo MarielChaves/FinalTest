@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FormularioMedidasActivity">
+
+
+        <!-- LinearLayout BOTON -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            android:orientation="vertical">
+
+
+            <!-- BOTON REGRESAR -->
+            <Button
+                android:id="@+id/btnHome3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Volver" />
+
+
+        </LinearLayout>  <!-- LinearLayout BOTON -->
+
+        <!-- LinearLayout VERTICAL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="FORMULARIO MEDIDAS DEL ESTUDIANTE"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+            <!-- LinearLayout HORIZONTAL  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:orientation="horizontal">
+
+                <!-- LinearLayout TextView -->
+                <LinearLayout
+                    android:layout_width="207dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewGrasa"
+                        android:layout_width="215dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Porcentaje Grasa:" />
+
+                    <TextView
+                        android:id="@+id/textViewMuscular"
+                        android:layout_width="215dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Porcentaje masa muscular:" />
+
+                    <TextView
+                        android:id="@+id/textViewPeso"
+                        android:layout_width="216dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text="Peso(kgs):" />
+
+                    <TextView
+                        android:id="@+id/textViewEdad"
+                        android:layout_width="216dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="60dp"
+                        android:text="Edad metabolica:" />
+
+                </LinearLayout>
+                <!-- LinearLayout TextView -->
+
+                <!-- LinearLayout EditText -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextGrasa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Grasa"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/editTextMuscular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Masa muscular"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/editTextPeso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Peso"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/editTextEdad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Edad"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+                <!-- LinearLayout EditText -->
+
+            </LinearLayout> <!-- LinearLayout HORIZONTAL  -->
+
+        </LinearLayout> <!-- LinearLayout VERTICAL -->
+
+
+
+
+
+</LinearLayout>
