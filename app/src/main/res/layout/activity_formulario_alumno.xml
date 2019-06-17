@@ -105,13 +105,16 @@
             android:layout_width="197dp"
             android:layout_height="wrap_content"
             android:onClick="takePicture"
-            android:text="Tomar una foto"></Button>
+            android:text="Tomar una foto">
+
+        </Button>
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="133dp"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+         />
 
     </LinearLayout>
 

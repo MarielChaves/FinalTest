@@ -19,7 +19,7 @@ public class FormularioMedidasActivity extends AppCompatActivity {
         btnHome3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FormularioMedidasActivity.this,ListaMedidasActivity.class);
+                Intent intent = new Intent(FormularioMedidasActivity.this,ListaAlumnosActivity.class);
                 startActivity(intent);
             }
         });

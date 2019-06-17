@@ -1,6 +1,7 @@
 package com.example.finaltest;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.provider.MediaStore;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
@@ -9,8 +10,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class FormularioAlumnoActivity extends AppCompatActivity {
+    private ImageView imageView;
+    private static final int REQUEST_IMAGE_CAPTURE = 101;
 
     Button btnIrVista3;
     Button btnHome2;
@@ -26,6 +30,7 @@ public class FormularioAlumnoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_alumno);
+        imageView = findViewById(R.id.imageView);
 
         nombre = findViewById(R.id.editTextNombre);
         edad   = findViewById(R.id.editTextEdad);
@@ -63,7 +68,7 @@ public class FormularioAlumnoActivity extends AppCompatActivity {
                 db.estudianteDAO().insertAll(new Estudiante(
                         nombre.getText().toString(), edad.getText().toString(), email.getText().toString()));
 
-                Intent intent = new Intent(FormularioAlumnoActivity.this,FormularioAlumnoActivity.class);
+                Intent intent = new Intent(FormularioAlumnoActivity.this,ListaAlumnosActivity.class);
                 startActivity(intent);
             }
         });
@@ -76,5 +81,13 @@ public class FormularioAlumnoActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            imageView.setImageBitmap(imageBitmap);
+        }
+    }
 
 }
